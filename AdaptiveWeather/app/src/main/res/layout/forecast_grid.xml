@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/forecast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/forecast_grid_background"
+    app:alignItems="center"
+    app:flexWrap="wrap"
+    app:justifyContent="space_around">
+
+   <LinearLayout
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+        app:layout_flexBasisPercent="29%"
+       android:orientation="vertical"
+       >
+
+       <TextView
+           android:id="@+id/textLabel"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/imageLabel"
+           android:layout_centerInParent="true"
+           android:layout_gravity="center"
+           android:singleLine="true"
+           android:text="Israel News"
+           android:textSize="18sp"
+           android:textStyle="bold"
+
+           android:layout_margin="10dp"
+           />
+        <ImageButton
+            android:id="@+id/imageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_thunder" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+
+        app:layout_flexBasisPercent="29%"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageLabel"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="Israel News"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+        <ImageButton
+            android:id="@+id/imageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_snow" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_flexBasisPercent="29%"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageLabel"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="Israel News"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+        <ImageButton
+            android:id="@+id/imageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_rain" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_flexBasisPercent="29%"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageLabel"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="Israel News"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+        <ImageButton
+            android:id="@+id/imageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_fog" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+
+        app:layout_flexBasisPercent="29%"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageLabel"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="Israel News"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+        <ImageButton
+            android:id="@+id/imageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_sun" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_flexBasisPercent="29%"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageLabel"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="Israel News"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+        <ImageButton
+            android:id="@+id/imageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_cloud" />
+
+
+    </LinearLayout>
+
+
+</com.google.android.flexbox.FlexboxLayout>
