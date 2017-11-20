@@ -1,5 +1,6 @@
 package com.raywenderlich.adaptiveweather;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,8 @@ import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.flexbox.FlexboxLayout;
 
@@ -19,110 +22,53 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
   private List<Location> mLocations = new ArrayList<>();
   LocationAdapter mLocationAdapter;
   private static final String SELECTED_LOCATION_INDEX = "selectedLocationIndex";
+  ImageButton _FoodButton;
+  ImageButton _SocialButton;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+    System.out.println("FODD sdsadasd PRESSED");
+    setContentView(R.layout.forecast_grid);
 
-    RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.list);
-    mRecyclerView.setHasFixedSize(true);
+    initializeElements();
+    setListeners();
 
-    LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-    DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, layoutManager.getOrientation());
-    mRecyclerView.addItemDecoration(dividerItemDecoration);
-    mRecyclerView.setLayoutManager(layoutManager);
 
-    loadData();
+  }
+  private void setListeners(){
+    _FoodButton.setOnClickListener(this);
+    _SocialButton.setOnClickListener(this);
+  }
 
-    mLocationAdapter = new LocationAdapter(this, mLocations, new LocationAdapter.OnItemClickListener() {
-      @Override
-      public void onItemClick(Location location) {
-        loadForecast(location.getForecast());
-      }
-    });
-    mRecyclerView.setAdapter(mLocationAdapter);
-    if (savedInstanceState != null) {
-      int index = savedInstanceState.getInt(SELECTED_LOCATION_INDEX);
-      mLocationAdapter.setSelectedLocationIndex(index);
-      loadForecast(mLocations.get(index).getForecast());
-    }
-
+  private void initializeElements(){
+    _FoodButton = (ImageButton)findViewById(R.id.FoodButton);
+    _SocialButton = (ImageButton)findViewById(R.id.SocialButton);
   }
 
   @Override
-  protected void onSaveInstanceState(Bundle outState) {
-    super.onSaveInstanceState(outState);
-    outState.putInt(SELECTED_LOCATION_INDEX, mLocationAdapter.getSelectedLocationIndex());
-  }
-  private void loadData() {
-    String json = null;
-    try {
-      InputStream is = getAssets().open("data.json");
-      int size = is.available();
-      byte[] buffer = new byte[size];
-      is.read(buffer);
-      is.close();
-      json = new String(buffer, "UTF-8");
-    } catch (IOException ex) {
-      ex.printStackTrace();
-    }
-    JSONArray array = null;
-    try {
-      array = new JSONArray(json);
-    } catch (JSONException e) {
-      e.printStackTrace();
-    }
-    for (int i = 0; i < array.length(); i++) {
-      try {
-        JSONObject object = (JSONObject) array.get(i);
-        JSONArray stringArray = (JSONArray) object.get("forecast");
-        List<String> forecast = new ArrayList<String>();
-        for (int j = 0; j < stringArray.length(); j++) {
-          forecast.add(stringArray.getString(j));
-        }
-        Location location = new Location((String) object.get("name"), forecast);
-        mLocations.add(location);
-      } catch (JSONException e) {
-        e.printStackTrace();
-      }
-    }
-  }
+  public void onClick(View view) {
+    switch(view.getId()){
+      case R.id.FoodButton:
+        System.out.println("FODD BUTTON PRESSED");
+        Intent toMenuActivity = new Intent(getApplicationContext(), ResultScreen.class);
+        //Grabbing the username to display in the Menu activity
+        //Starting the Menu activity
 
-  private Drawable mapWeatherToDrawable(String forecast) {
-    int drawableId = 0;
-    switch (forecast) {
-      case "sun":
-        drawableId = R.drawable.ic_sun;
+        startActivity(toMenuActivity);
         break;
-      case "rain":
-        drawableId = R.drawable.ic_rain;
+      case R.id.SocialButton:
+        //Starting the Signup activity
+        Intent resultScreen = new Intent(getApplicationContext(), ResultScreen.class);
+        startActivity(resultScreen);
         break;
-      case "fog":
-        drawableId = R.drawable.ic_fog;
-        break;
-      case "thunder":
-        drawableId = R.drawable.ic_thunder;
-        break;
-      case "cloud":
-        drawableId = R.drawable.ic_cloud;
-        break;
-      case "snow":
-        drawableId = R.drawable.ic_snow;
-        break;
-    }
-    return getResources().getDrawable(drawableId);
-  }
-
-  private void loadForecast(List<String> forecast){
-    FlexboxLayout forecastView = (FlexboxLayout) findViewById(R.id.forecast);
-    for (int i = 0; i < forecastView.getChildCount(); i++) {
-      AppCompatImageView dayView = (AppCompatImageView) forecastView.getChildAt(i);
-      dayView.setImageDrawable(mapWeatherToDrawable(forecast.get(i)));
     }
   }
 }

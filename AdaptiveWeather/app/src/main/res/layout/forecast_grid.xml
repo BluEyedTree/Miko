@@ -11,7 +11,7 @@
     app:justifyContent="space_around">
 
    <LinearLayout
-        android:id="@+id/day1"
+        android:id="@+id/FoodContainer"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
         android:layout_marginLeft="10dp"
@@ -21,21 +21,20 @@
        >
 
        <TextView
-           android:id="@+id/textLabel"
+           android:id="@+id/FoodTextLabel"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:layout_below="@id/imageLabel"
            android:layout_centerInParent="true"
            android:layout_gravity="center"
            android:singleLine="true"
-           android:text="Israel News"
+           android:text="Food"
            android:textSize="18sp"
            android:textStyle="bold"
 
            android:layout_margin="10dp"
            />
         <ImageButton
-            android:id="@+id/imageLabel"
+            android:id="@+id/FoodButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -45,7 +44,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/day1"
+        android:id="@+id/SocialContainer"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
 
@@ -54,20 +53,19 @@
         >
 
         <TextView
-            android:id="@+id/textLabel"
+            android:id="@+id/SocailTextLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageLabel"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:singleLine="true"
-            android:text="Israel News"
+            android:text="Social"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
         <ImageButton
-            android:id="@+id/imageLabel"
+            android:id="@+id/SocialButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -76,7 +74,7 @@
 
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/day1"
+        android:id="@+id/OutdoorContainer"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
         android:layout_marginLeft="10dp"
@@ -86,20 +84,19 @@
         >
 
         <TextView
-            android:id="@+id/textLabel"
+            android:id="@+id/OutdoorTextLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageLabel"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:singleLine="true"
-            android:text="Israel News"
+            android:text="Outdoor"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
         <ImageButton
-            android:id="@+id/imageLabel"
+            android:id="@+id/OutdoorButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -109,7 +106,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/day1"
+        android:id="@+id/IndoorContainer"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
         android:layout_marginLeft="10dp"
@@ -119,20 +116,19 @@
         >
 
         <TextView
-            android:id="@+id/textLabel"
+            android:id="@+id/IndoorTextLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageLabel"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:singleLine="true"
-            android:text="Israel News"
+            android:text="Indoor"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
         <ImageButton
-            android:id="@+id/imageLabel"
+            android:id="@+id/IndoorButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -142,7 +138,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/day1"
+        android:id="@+id/Activity1Countainer"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
 
@@ -151,20 +147,19 @@
         >
 
         <TextView
-            android:id="@+id/textLabel"
+            android:id="@+id/Activity1TextLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageLabel"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:singleLine="true"
-            android:text="Israel News"
+            android:text="Activity"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
         <ImageButton
-            android:id="@+id/imageLabel"
+            android:id="@+id/Activity1Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -173,7 +168,7 @@
 
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/day1"
+        android:id="@+id/Activity2Countainer"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
         android:layout_marginLeft="10dp"
@@ -183,20 +178,19 @@
         >
 
         <TextView
-            android:id="@+id/textLabel"
+            android:id="@+id/Activity2TextLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageLabel"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:singleLine="true"
-            android:text="Israel News"
+            android:text="Activity 2"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
         <ImageButton
-            android:id="@+id/imageLabel"
+            android:id="@+id/Activity2Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
