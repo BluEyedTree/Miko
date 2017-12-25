@@ -20,19 +20,22 @@
             android:layout_height="0px"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:layout_gravity="top"
             android:layout_marginTop="0px"
+
             >
-            <EditText
+            <TextView
                 android:id="@+id/NameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="Name"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_alignLeft="@+id/DistanceText"
-                android:layout_alignStart="@+id/DistanceText" />
-        <EditText
+
+                android:gravity="right" />
+        <TextView
             android:id="@+id/DistanceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,10 +43,11 @@
             android:background="@android:color/transparent"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="0.0 M"
+            android:text="0.0 M &#8226; 988 W Dillon Rd"
+            android:clickable="true"
             android:layout_below="@+id/NameText"
             />
-            <EditText
+            <TextView
                 android:id="@+id/phoneNumberText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +58,7 @@
                 android:text="(561) 757-9154"
                 android:layout_below="@+id/DistanceText"
                 />
-            <EditText
+            <TextView
                 android:id="@+id/RatingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +69,42 @@
                 android:text="5/5"
                 android:layout_below="@+id/phoneNumberText"
                 />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/PriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:text="$$"
+                android:layout_below="@+id/RatingText"
+                />
+            <TextView
+                android:id="@+id/HoursText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:text="Hours Today: 9am-5pm"
+                android:layout_below="@+id/PriceText"
+                />
+            <TextView
+                android:id="@+id/TypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:text="Food Type"
+                android:layout_below="@+id/HoursText"
+                />
+        </RelativeLayout>
+
+
     <LinearLayout
         android:id="@+id/day1"
 

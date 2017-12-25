@@ -8,7 +8,10 @@
     android:background="@color/forecast_grid_background"
     app:alignItems="center"
     app:flexWrap="wrap"
-    app:justifyContent="space_around">
+    app:justifyContent="space_around"
+
+
+    >
 
    <LinearLayout
         android:id="@+id/FoodContainer"
@@ -30,15 +33,14 @@
            android:text="Food"
            android:textSize="18sp"
            android:textStyle="bold"
-
            android:layout_margin="10dp"
            />
         <ImageButton
             android:id="@+id/FoodButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@drawable/ic_thunder" />
+            android:background="@mipmap/food_icon_proper" />
 
 
     </LinearLayout>
@@ -66,10 +68,10 @@
             />
         <ImageButton
             android:id="@+id/SocialButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@drawable/ic_snow" />
+            android:background="@mipmap/social_icon" />
 
 
     </LinearLayout>
@@ -97,10 +99,10 @@
             />
         <ImageButton
             android:id="@+id/OutdoorButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@drawable/ic_rain" />
+            android:background="@mipmap/outdoor_icon" />
 
 
     </LinearLayout>
@@ -129,10 +131,10 @@
             />
         <ImageButton
             android:id="@+id/IndoorButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@drawable/ic_fog" />
+            android:background="@mipmap/indoor_icon" />
 
 
     </LinearLayout>
@@ -153,17 +155,17 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:singleLine="true"
-            android:text="Activity"
+            android:text="Tickets"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
         <ImageButton
             android:id="@+id/Activity1Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@drawable/ic_sun" />
+            android:background="@mipmap/ticket_icon" />
 
 
     </LinearLayout>
@@ -184,17 +186,17 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:singleLine="true"
-            android:text="Activity 2"
+            android:text="Random"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
             />
         <ImageButton
             android:id="@+id/Activity2Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:background="@drawable/ic_cloud" />
+            android:background="@mipmap/random_icon" />
 
 
     </LinearLayout>
